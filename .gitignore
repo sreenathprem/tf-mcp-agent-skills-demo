@@ -1,0 +1,21 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+.terraform.tfstate.lock.info
+
+# Created during demo runs and deleted by scripts/reset.sh
+/claims-portal/
+/policies/
+
+# Terraform plan files and local overrides
+*.tfplan
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local editor and Claude settings
+.DS_Store
+.claude/settings.local.json

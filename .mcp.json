@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "terraform": {
+      "type": "stdio",
+      "command": "/bin/zsh",
+      "args": [
+        "-c",
+        "eval \"$(grep -E '^export TFE_(TOKEN|ADDRESS)=' ~/.zshrc)\"; exec /opt/homebrew/bin/podman run -i --rm -e TFE_TOKEN -e TFE_ADDRESS docker.io/hashicorp/terraform-mcp-server:latest --toolsets=registry,registry-private,terraform"
+      ]
+    }
+  }
+}
